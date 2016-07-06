@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  calorie: 1
+  photo: 
+  tot_rating: 1
+  tot_num: 1
+  tdate: 2016-07-06
+
+two:
+  name: MyText
+  calorie: 1
+  photo: 
+  tot_rating: 1
+  tot_num: 1
+  tdate: 2016-07-06

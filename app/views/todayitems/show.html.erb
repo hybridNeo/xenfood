@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @todayitem.name %>
+</p>
+
+<p>
+  <strong>Calorie:</strong>
+  <%= @todayitem.calorie %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+ <%= image_tag @todayitem.foodimage.url %>
+</p>
+
+<p>
+  <strong>Tot rating:</strong>
+  <%= @todayitem.tot_rating %>
+</p>
+
+<p>
+  <strong>Tot num:</strong>
+  <%= @todayitem.tot_num %>
+</p>
+
+<p>
+  <strong>Tdate:</strong>
+  <%= @todayitem.tdate %>
+</p>
+
+<%= link_to 'Edit', edit_todayitem_path(@todayitem) %> |
+<%= link_to 'Back', todayitems_path %>

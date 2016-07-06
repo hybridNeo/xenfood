@@ -1,0 +1,38 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Menu for <%= Date.today.to_formatted_s(:long_ordinal) %></h1>
+
+<table  class="table table-hover table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Calories</th>
+      <th>Image</th>
+      <th>Total score</th>
+      <th>Total num of votes</th>
+      <th>date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todayitems.each do |todayitem| %>
+      <tr>
+        <td><%= todayitem.name %></td>
+        <td><%= todayitem.calorie %></td>
+        <td> <%= image_tag todayitem.foodimage.url(:thumb) %></td>
+        <td><%= todayitem.tot_rating %></td>
+        <td><%= todayitem.tot_num %></td>
+        <td><%= todayitem.tdate %></td>
+        <td><%= button_to 'Show', todayitem,{:class=>"btn btn-primary"}  %></td>
+        <td><%= button_to 'Edit', edit_todayitem_path(todayitem) , {:class=>"btn btn-warning"} %></td>
+        <td ><button  class="btn btn-danger"><%= link_to 'Delete', todayitem, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add menu entry', new_todayitem_path ,{:class=>"btn btn-primary"} %>
